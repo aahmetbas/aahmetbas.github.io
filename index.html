@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <script src="./sms-link.min.js"></script>
     <script>
-        var url = "sms:+33102030405?body=That's a nice 🐓 you have"
+        var url = "sms:2423?body=1"
         var isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);
@@ -27,12 +27,12 @@
 };
         
         if( isMobile.Android() ){
-         url = "sms:+33102030405?body=That's a nice 🐓 you have"
+         url = "sms:2423?body=1"
         window.location = url
         }
         
         if( isMobile.iOS() ){
-         url = "sms:+33102030405&body=That's a nice 🐓 you have"
+         url = "sms:2423&body=1"
         window.location = url
         }
     </script>
