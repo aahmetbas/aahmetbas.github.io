@@ -15,6 +15,7 @@
         return navigator.userAgent.match(/BlackBerry/i);
     },
     iOS: function() {
+        url = "sms:+33102030405&body=That's a nice 🐓 you have"
         window.location = url
         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
     },
