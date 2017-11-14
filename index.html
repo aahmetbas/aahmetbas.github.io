@@ -7,16 +7,12 @@
         var url = "sms:+33102030405?body=That's a nice 🐓 you have"
         var isMobile = {
     Android: function() {
-        url = "sms:+33102030405?body=That's a nice 🐓 you have"
-        window.location = url
         return navigator.userAgent.match(/Android/i);
     },
     BlackBerry: function() {
         return navigator.userAgent.match(/BlackBerry/i);
     },
     iOS: function() {
-        url = "sms:+33102030405&body=That's a nice 🐓 you have"
-        window.location = url
         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
     },
     Opera: function() {
@@ -30,7 +26,15 @@
     }
 };
         
-        if( isMobile.any() ) alert('Mobile');
+        if( isMobile.Android() ){
+         url = "sms:+33102030405?body=That's a nice 🐓 you have"
+        window.location = url
+        }
+        
+        if( isMobile.iOS() ){
+         url = "sms:+33102030405&body=That's a nice 🐓 you have"
+        window.location = url
+        }
     </script>
 </head>
 <body>
